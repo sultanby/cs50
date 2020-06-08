@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post">
+
+        <!-- TODO -->
+        <label for="EmailInput">Email address: </label>
+        <input type="email" name="Email" id="EmailInput" placeholder="name@example.com" required><br>
+        <label for="AgeInput">Your age: </label>
+        <input type="number" name="age" id="AgeInput" min="1" max="120" required><br>
+        <label for="GenderInput">Gender: </label>
+        <select name="Gender" id="GenderInput" required>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Nonbinary</option>
+            <option>Prefer not to say</option>
+        </select><br>
+        <label for="EducationInput">Highest level of education completed so far: </label><br>
+        <input type="radio" name="EducationInput" id="NoHighSchoolDiploma" value="No High School Diploma" checked>
+        <label for="NoHighSchoolDiploma">No High School Diploma</label><br>
+        <input type="radio" name="EducationInput" id="HighSchoolDiploma" value="High School Diploma">
+        <label for="HighSchoolDiploma">High School Diploma</label><br>
+        <input type="radio" name="EducationInput" id="College" value="College">
+        <label for="College">College</label><br>
+        <input type="radio" name="EducationInput" id="BachelorDegree" value="Bachelor Degree">
+        <label for="BachelorDegree">Bachelor Degree</label><br>
+        <input type="radio" name="EducationInput" id="MastersDegree" value="Masters Degree">
+        <label for="MastersDegree">Masters Degree</label><br>
+        <input type="radio" name="EducationInput" id="PhD" value="PhD">
+        <label for="PhD">PhD</label><br>
+        <label for="InterestArea">What is your biggest interest area: </label><br>
+        <input type="text" name="Area" id="InterestArea" placeholder="Biology" required>
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        /* TODO */
+
+    </script>
+
+{% endblock %}

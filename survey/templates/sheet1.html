@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<h2 class="display-1">Submits</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">E-mail</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Education</th>
+      <th scope="col">Interest Area</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for submit in submits %}
+      <tr>
+        <td> {{submit[0]}} </td>
+        <td> {{submit[1]}} </td>
+        <td> {{submit[2]}} </td>
+        <td> {{submit[3]}} </td>
+        <td> {{submit[4]}} </td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
